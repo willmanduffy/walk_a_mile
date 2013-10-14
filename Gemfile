@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'clearance'
+gem 'clearance', '~> 1.0.1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'pg'
