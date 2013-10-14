@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore database.yml, keep database.yml.example tracked by git
+config/database.yml
+

@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: walk_a_mile
+  password:
+
+development:
+  <<: *default
+  database: wam_dev
+
+test: &test
+  <<: *default
+  min_messages: WARNING
+  database: wam_test
