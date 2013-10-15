@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131014221052) do
+ActiveRecord::Schema.define(version: 20131015013459) do
+
+  create_table "products", force: true do |t|
+    t.string  "name"
+    t.decimal "price", precision: 8, scale: 2
+  end
+
+  create_table "products_users", force: true do |t|
+    t.integer "product_id"
+    t.integer "user_id"
+  end
+
+  add_index "products_users", ["product_id"], name: "index_products_users_on_product_id", using: :btree
+  add_index "products_users", ["user_id"], name: "index_products_users_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.datetime "created_at",                     null: false

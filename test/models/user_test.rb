@@ -3,6 +3,17 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   subject { User.new }
 
+  # Associations
+  # It appears that the minitest version of shoulda-matchers currently has Rails 4 issues
+  # must { have_and_belong_to_many(:products) }
+
+  # Validations
+  describe 'uniqueness' do
+    before { create(:user) }
+
+    must { validate_uniqueness_of(:email) }
+  end
+
   # Methods
   describe 'admin?' do
     context 'when the user is an admin' do
