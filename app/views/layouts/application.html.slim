@@ -28,7 +28,9 @@ body class=page_class
         ul class='nav navbar-nav navbar-right'
           - if signed_in?
             li
-              = link_to 'Your Account', '#'
+              = link_to cart_current_user_path do
+                span class='glyphicon glyphicon-shopping-cart cart'
+                span = cart_count
             li
               = link_to 'Sign Out', sign_out_path, method: :delete
 
