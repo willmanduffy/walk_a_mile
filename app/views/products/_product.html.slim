@@ -1,3 +1,10 @@
-li
-  = product.name
-  = product.price
+div class='col-sm-6 col-md-4'
+  div class='thumbnail'
+    = image_tag 'http://placehold.it/300x200'
+
+    div class='caption'
+      h3 = product.name
+      p Lorem ipsum...
+
+      p
+        = link_to "$#{product.price} - Add to Cart", '#', class: 'btn btn-primary', role: 'button'

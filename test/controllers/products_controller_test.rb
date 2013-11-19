@@ -1,8 +1,6 @@
 require 'test_helper'
 
 describe ProductsController do
-  # before { sign_in_as create(:user) }
-
   describe 'a GET to #index' do
     before { get :index }
 
