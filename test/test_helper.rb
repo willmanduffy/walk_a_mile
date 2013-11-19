@@ -4,6 +4,7 @@ require 'rails/test_help'
 require 'minitest/autorun'
 require 'minitest/matchers'
 require 'minitest/rails'
+require 'clearance/testing'
 
 class MiniTest::Rails::ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods

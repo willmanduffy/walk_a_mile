@@ -35,12 +35,12 @@ class UserTest < ActiveSupport::TestCase
 
   # Behavior
   describe 'set_defaults' do
-    subject { User.new(role: nil) }
+    subject { build(:user, role: nil) }
 
     it 'must set the proper default values' do
       subject.valid?
 
-      subject.role_id.must_equal 0
+      subject.role.must_equal Role.user
     end
   end
 end

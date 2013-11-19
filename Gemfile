@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'active_hash', '~> 1.2.0'
+gem 'bootstrap-sass-rails'
 gem 'clearance', '~> 1.0.1'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'slim'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '4.0.0'
