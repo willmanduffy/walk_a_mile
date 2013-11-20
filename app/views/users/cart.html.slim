@@ -15,7 +15,7 @@ div class='page-header'
         tr
           td = product.name
           td $#{product.price}
-          td = link_to 'Remove', '#'
+          td = link_to 'Remove', product_remove_path(product), method: :delete
 
   div class='pull-right'
     h3 Total Price: $#{@total_price}

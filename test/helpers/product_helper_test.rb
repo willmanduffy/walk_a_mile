@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ApplicationHelperTest < ActiveSupport::TestCase
   include ActionView::Helpers::TextHelper
-  include ApplicationHelper
+  include ProductHelper
 
   describe 'cart_count' do
     context 'when there are no products in the cart' do

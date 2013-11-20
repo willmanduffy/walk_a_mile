@@ -4,8 +4,8 @@ class UserTest < ActiveSupport::TestCase
   subject { User.new }
 
   # Associations
-  # It appears that the minitest version of shoulda-matchers currently has Rails 4 issues
-  # must { have_and_belong_to_many(:products) }
+  must { have_many(:products).through(:products_users) }
+  must { have_many(:products_users) }
 
   # Validations
   describe 'uniqueness' do

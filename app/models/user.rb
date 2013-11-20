@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
   # Associations
   belongs_to_active_hash :role
 
-  has_and_belongs_to_many :products
+  has_many :products, through: :products_users
+  has_many :products_users
 
   # Validations
   validates :role, inclusion: { in: Role.all }

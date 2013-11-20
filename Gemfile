@@ -19,6 +19,7 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'm'
   gem 'minitest-matchers'
   gem 'minitest-rails'
   gem 'minitest-rails-shoulda'
