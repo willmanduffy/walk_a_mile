@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def require_session
-    redirect_to(new_user_path) unless signed_in?
+    redirect_to(sign_in_path) unless signed_in?
   end
 end
