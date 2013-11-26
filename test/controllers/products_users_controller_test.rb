@@ -3,7 +3,7 @@ require 'test_helper'
 describe ProductsUsersController do
   describe 'a POST to #create' do
     before do
-      sign_in_as build_stubbed(:user)
+      sign_in_as create(:user)
 
       @product = build_stubbed(:product)
 
